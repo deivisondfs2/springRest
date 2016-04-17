@@ -54,7 +54,7 @@ public class Contato {
 			equals = true;
 		} else if (obj instanceof Contato) {
 			Contato object = (Contato) obj;
-			equals = new EqualsBuilder().append(_id, object._id)						
+			equals = new EqualsBuilder().append(_id, object._id).append(telefone, object.telefone)						
 					.isEquals();
 		}
 		return equals;
@@ -62,7 +62,7 @@ public class Contato {
 
 	@Override
 	public int hashCode() {
-		return new HashCodeBuilder().append(_id).toHashCode();
+		return new HashCodeBuilder().append(_id).append(telefone).toHashCode();
 	}
 
 }
