@@ -14,5 +14,7 @@ public interface ContatoService {
 	
 	public void alterarContato(Contato contato);
 	
-	public Contato buscarContato(String telefone);
+	public Contato buscarContatoPorTelefone(String telefone);
+	
+	public Contato buscarContatoPorId(long _id);
 }
